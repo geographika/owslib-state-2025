@@ -1,24 +1,121 @@
 <section data-markdown>
     <script type="text/template">
-        <img class="plain" src="images/logo-osgeo.svg" style="background: none;" />
+        <!--<img class="plain" src="images/logo-osgeo.svg" style="background: none;" />-->
+        <img class="plain" src="images/geopython_logo.png" style="background: none;" />
 
         ## State of OWSLib 2025
 
-        #### by Seth Girvin
+        #### by Seth Girvin and the OWSLib Team
 
-        <img class="plain" src="images/foss4g.png" style="background: none; width: 40%;" />
+        <img src="images/foss4g.png" style="width: 40%; border-color: black; border-width: thin; border-style: solid;" />
     </script>
 </section>
 
 <section data-markdown>
     <script type="text/template">
-        <img class="plain" src="images/banner.png" style="background: none;" />
+        <blockquote style="font-size: 2em; line-height: 1.5em;">
+            “OWSLib is a Python package for client programming with OGC web service interface standards”<br>
+        </blockquote>
+    </script>
+</section>
 
+
+<section data-markdown style="font-size: 0.45em;">
+    | Standard                                                                 | Version(s)                  |
+    |--------------------------------------------------------------------------|-----------------------------|
+    | [OGC WMS](https://www.opengeospatial.org/standards/wms)                  | 1.1.1, 1.3.0                |
+    | [OGC WFS](https://www.opengeospatial.org/standards/wfs)                  | 1.0.0, 1.1.0, 2.0.0, 3.0    |
+    | [OGC WCS](https://www.opengeospatial.org/standards/wcs)                  | 1.0.0, 1.1.0, 2.0, 2.0.1    |
+    | [OGC WMC](https://www.opengeospatial.org/standards/wmc)                  | 1.1.0                       |
+    | [OGC SOS](https://www.opengeospatial.org/standards/sos)                  | 1.0.0, 2.0.0                |
+    | [OGC SensorML](https://www.opengeospatial.org/standards/sensorml)        | 1.0.1                       |
+    | [OGC CSW](https://www.opengeospatial.org/standards/cat)                  | 2.0.2                       |
+    | [OGC WPS](https://www.opengeospatial.org/standards/wps)                  | 1.0.0                       |
+    | [OGC Filter](https://www.opengeospatial.org/standards/filter)            | 1.1.0                       |
+    | [OGC OWS Common](https://www.opengeospatial.org/standards/common)        | 1.0.0, 1.1.0, 2.0           |
+    | [OGC OWS Context](https://www.opengeospatial.org/standards/owc)          | 1.0.0 (alpha/under-review)  |
+    | [NASA DIF](https://www.earthdata.nasa.gov/about/esdis/esco/standards-practices/directory-interchange-format-standard)| 9.7 |
+    | [FGDC CSDGM](https://www.fgdc.gov/metadata/csdgm-standard)               | 1998                        |
+    | [ISO 19139](https://www.iso.org/standard/32557.html)                     | 2007                        |
+    | [ISO 19139-2](https://www.iso.org/standard/57104.html)                   | 2012                        |
+    | [Dublin Core](https://www.dublincore.org/)                               | 1.1                         |
+    | [Swiss GM03](https://www.geocat.admin.ch/en/dokumentation/gm03.html)     | 2.3                         |
+    | [OGC WMTS](https://www.opengeospatial.org/standards/wmts)                | 1.0.0                       |
+    | [WaterML](http://his.cuahsi.org/wofws.html#waterml)                      | 1.0, 1.1, 2.0               |
+    | [OpenSearch](https://github.com/dewitt/opensearch)                       | 1.1                         |
+</section>
+
+<section data-markdown style="font-size: 0.6em;">
+    | Standard                                                                                                                      | Version(s) |
+    |-------------------------------------------------------------------------------------------------------------------------------|------------|
+    | [OGC API - Features - Part 1: Core](https://docs.ogc.org/is/17-069r4/17-069r4.html)                                           | 1.0        |
+    | [OGC API - Features - Part 3: Filtering and the Common Query Language (CQL)](https://docs.ogc.org/is/19-079r2/19-079r2.html)  | draft      |
+    | [OGC API - Features - Part 4: Create, Replace, Update and Delete](https://docs.ogc.org/DRAFTS/20-002r1.html)                  | draft      |
+    | [OGC API - Coverages - Part 1: Core](https://docs.ogc.org/DRAFTS/19-087.html)                                                 | draft      |
+    | [OGC API - Maps - Part 1: Core](https://docs.ogc.org/is/20-058/20-058.html)                                                   | draft      |
+    | [OGC API - Records - Part 1: Core](https://docs.ogc.org/is/20-004r1/20-004r1.html)                                            | draft      |
+    | [OGC API - Processes - Part 1: Core](https://docs.ogc.org/is/18-062r2/18-062r2.html)                                          | 1.0        |
+    | [OGC API - Environmental Data Retrieval - Part 1: Core](https://docs.ogc.org/is/19-086r6/19-086r6.html)                       | draft      |
+    | [OGC API - Connected Systems - Part 1: Feature Resources](https://docs.ogc.org/DRAFTS/23-001r0.html)                          | draft      |
+    | [OGC API - Connected Systems - Part 2: Dynamic Data](https://docs.ogc.org/DRAFTS/23-002r0.html)                               | draft      |
+</section>
+
+<section data-markdown>
+    <textarea data-template>
+        #### Installing OWSLib
+
+
+        ```bash
+        pip3 install OWSLib
+        ```
+
+        ```bash
+        git conda install -c conda-forge owslib
+        ```
+
+        ```bash
+        apt-get install python3-owslib
+        ```
+
+    </textarea>
+</section>
+
+<section data-markdown data-background="images/owslib-notebook.png" data-background-opacity="0.8" data-background-size="55%">
+    <script type="text/template">
+        ### [OSGeoLive Notebooks](https://live.osgeo.org)
+    </script>
+</section>
+
+
+<section data-markdown>
+    <script type="text/template">
+        From [Open Hub](https://openhub.net/p/OWSLib)
+
+        + 2,348 commits made by **165** contributors
+        + representing **167,906** lines of code
+        + an estimated **43 years of effort** (COCOMO model)
+        + first commit in **April, 2007**
+
+        <hr />
+
+        + Downloaded **4.93** million times[¹](https://pepy.tech/projects/owslib)
+        + Over **150,000** times in the last month[²](https://pypistats.org/packages/owslib)
+    </script>
+</section>
+
+<section data-markdown>
+    <script type="text/template">
         ### Thanks for Listening!
 
+        + [OWSLib Homepage](https://owslib.readthedocs.io/)
+        + [PyPI](https://pypi.org/project/OWSLib/)
+
+        <br />
+        <img class="plain" src="images/geopython_logo.png" style="background: none;" />
+        <br />
         <a href="https://mastodon.social/@geographika" style="text-decoration: none;">
-            <img src="images/mastodon.png" alt="Mastodon Icon" style="width: 50px; vertical-align: middle;">
-            <span style="vertical-align: middle;">@geographika</span>
+            <img src="images/mastodon.png" alt="Mastodon Icon" style="width: 30px; vertical-align: middle;">
+            <span style="vertical-align: middle; font-size: 0.5em;">@geographika</span>
         </a>
 
     </script>
