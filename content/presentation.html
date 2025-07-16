@@ -35,7 +35,7 @@
     </script>
 </section>
 
-<section data-markdown style="font-size: 0.45em;" data-background="images/ogc-logo.png" data-background-opacity="0.1" 
+<section data-markdown style="font-size: 0.45em;" data-background="images/ogc-logo.png" data-background-opacity="0.1"
          data-background-size="15%">
     | Standard                                                                 | Version(s)                  |
     |--------------------------------------------------------------------------|-----------------------------|
@@ -114,7 +114,47 @@
     </textarea>
 </section>
 
-<section data-markdown data-background="images/geopython-notebook" data-background-opacity="0.8" data-background-size="55%">
+<section data-markdown data-background="images/output.jpg" data-background-opacity="0.3">
+    <textarea data-template>
+        ## WMS
+
+```python
+from owslib.wms import WebMapService
+wms = WebMapService('https://demo.mapserver.org/cgi-bin/msautotest', 
+                    version='1.3.0')
+
+data = wms.getmap(layers=['world_latlong'],
+                 srs='EPSG:4326',
+                 bbox=(-180, -90, 180, 90),
+                 size=(1200, 800),
+                 format='image/jpeg',
+                 transparent=True)
+
+with open("output.jpg", "wb") as fh:
+    fh.write(data.read())
+```
+    </textarea>
+</section>
+
+<section data-markdown data-background="images/output.png" data-background-opacity="0.5">
+    <textarea data-template>
+        ## OGC Maps API
+
+```python
+from owslib.ogcapi.maps import Maps
+m = Maps('https://demo.pygeoapi.io/stable/')
+
+data = m.map('mapserver_world_map', width=1200, height=800)
+
+with open("output.png", "wb") as fh:
+    fh.write(data.getbuffer())
+```
+    </textarea>
+</section>
+
+
+
+<section data-markdown data-background="images/geopython-notebook.png" data-background-opacity="0.8" data-background-size="55%">
     <script type="text/template">
         ### [Doing Geospatial in Python](https://geopython.github.io/geopython-workshop/)
         ### [OSGeoLive Notebooks](https://live.osgeo.org)
